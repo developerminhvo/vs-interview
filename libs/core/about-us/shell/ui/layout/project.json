@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/core/about-us/shell/ui/layout",
+  "sourceRoot": "libs/core/about-us/shell/ui/layout/src",
+  "prefix": "vs-about-us",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/core/about-us/shell/ui/layout/src/test.ts",
+        "tsConfig": "libs/core/about-us/shell/ui/layout/tsconfig.spec.json",
+        "karmaConfig": "libs/core/about-us/shell/ui/layout/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/about-us/shell/ui/layout/src/**/*.ts",
+          "libs/core/about-us/shell/ui/layout/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -14,7 +14,21 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@core-about-us": ["libs/core/about-us/index.ts"],
+      "@core-about-us-layout": [
+        "libs/core/about-us/shell/ui/layout/src/index.ts"
+      ],
+      "@core-home": ["libs/core/home/index.ts"],
+      "@core-home-layout": ["libs/core/home/shell/ui/layout/src/index.ts"],
+      "@core-portfolio": ["libs/core/portfolio/index.ts"],
+      "@core-portfolio-layout": [
+        "libs/core/portfolio/shell/ui/layout/src/index.ts"
+      ],
+      "@core-shell": ["libs/core/shell/index.ts"],
+      "@core-shell-layout": ["libs/core/shell/ui/layout/src/index.ts"],
+      "@core-shell-main": ["libs/core/shell/main/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

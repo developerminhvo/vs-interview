@@ -1,0 +1,28 @@
+{
+  "root": "apps/vs-interview-e2e",
+  "sourceRoot": "apps/vs-interview-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/vs-interview-e2e/cypress.json",
+        "devServerTarget": "vs-interview:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "vs-interview:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/vs-interview-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["vs-interview"]
+}

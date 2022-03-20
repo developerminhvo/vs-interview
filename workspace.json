@@ -1,4 +1,15 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "core-about-us-shell-main": "libs/core/about-us/shell/main",
+    "core-about-us-shell-ui-layout": "libs/core/about-us/shell/ui/layout",
+    "core-home-shell-main": "libs/core/home/shell/main",
+    "core-home-shell-ui-layout": "libs/core/home/shell/ui/layout",
+    "core-portfolio-shell-main": "libs/core/portfolio/shell/main",
+    "core-portfolio-shell-ui-layout": "libs/core/portfolio/shell/ui/layout",
+    "core-shell-main": "libs/core/shell/main",
+    "core-shell-ui-layout": "libs/core/shell/ui/layout",
+    "vs-interview": "apps/vs-interview",
+    "vs-interview-e2e": "apps/vs-interview-e2e"
+  }
 }

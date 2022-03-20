@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/core/portfolio/shell/main",
+  "sourceRoot": "libs/core/portfolio/shell/main/src",
+  "prefix": "vs-portfolio",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/core/portfolio/shell/main/src/test.ts",
+        "tsConfig": "libs/core/portfolio/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/core/portfolio/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/portfolio/shell/main/src/**/*.ts",
+          "libs/core/portfolio/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

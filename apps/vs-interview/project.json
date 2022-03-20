@@ -1,0 +1,101 @@
+{
+  "projectType": "application",
+  "root": "apps/vs-interview",
+  "sourceRoot": "apps/vs-interview/src",
+  "prefix": "vs",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/vs-interview",
+        "index": "apps/vs-interview/src/index.html",
+        "main": "apps/vs-interview/src/main.ts",
+        "polyfills": "apps/vs-interview/src/polyfills.ts",
+        "tsConfig": "apps/vs-interview/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/vs-interview/src/favicon.ico",
+          "apps/vs-interview/src/assets"
+        ],
+        "styles": ["apps/vs-interview/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/vs-interview/src/environments/environment.ts",
+              "with": "apps/vs-interview/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "vs-interview:build:production"
+        },
+        "development": {
+          "browserTarget": "vs-interview:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "vs-interview:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/vs-interview/src/**/*.ts",
+          "apps/vs-interview/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/vs-interview/src/test.ts",
+        "tsConfig": "apps/vs-interview/tsconfig.spec.json",
+        "karmaConfig": "apps/vs-interview/karma.conf.js",
+        "polyfills": "apps/vs-interview/src/polyfills.ts",
+        "styles": [],
+        "scripts": [],
+        "assets": []
+      }
+    }
+  },
+  "tags": []
+}

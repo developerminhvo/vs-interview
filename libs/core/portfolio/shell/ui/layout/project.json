@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/core/portfolio/shell/ui/layout",
+  "sourceRoot": "libs/core/portfolio/shell/ui/layout/src",
+  "prefix": "vs-portfolio-layout",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/core/portfolio/shell/ui/layout/src/test.ts",
+        "tsConfig": "libs/core/portfolio/shell/ui/layout/tsconfig.spec.json",
+        "karmaConfig": "libs/core/portfolio/shell/ui/layout/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/portfolio/shell/ui/layout/src/**/*.ts",
+          "libs/core/portfolio/shell/ui/layout/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
